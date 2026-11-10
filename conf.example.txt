@@ -1,0 +1,12 @@
+# Copy this file to conf.txt, then fill in your real keys and endpoint.
+# DNS is ignored by this deployment. IPv4 AllowedIPs configure routes/firewall.
+[Interface]
+PrivateKey = REPLACE_WITH_BASE64_PRIVATE_KEY
+Address = 10.20.0.3/32
+MTU = 1300
+
+[Peer]
+PublicKey = REPLACE_WITH_SERVER_BASE64_PUBLIC_KEY
+AllowedIPs = 192.168.20.0/24, 10.30.0.1/32, 10.20.0.0/24
+Endpoint = vpn.example.com:51820
+PersistentKeepalive = 25

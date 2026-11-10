@@ -1,0 +1,39 @@
+# Real router configuration and credentials. Commit only the template.
+/conf.txt
+/conf.*.txt
+!/conf.example.txt
+*.conf
+*.private
+*.key
+*.pem
+*.p12
+*.pfx
+*.ppk
+id_rsa
+id_ed25519
+.env
+.env.*
+!.env.example
+secrets/
+backups/
+
+# Downloaded SDKs, preserved upstream Git metadata, and local test artifacts.
+/.toolchains/
+*.test
+*.test.exe
+*.tar.gz
+*.zip
+*.log
+*.tmp
+*.bak
+__pycache__/
+*.py[cod]
+
+# Editor and operating-system files.
+/.vs/
+/.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# dist/ is intentionally tracked: deploy.ps1 needs its three checked binaries.
