@@ -2,6 +2,7 @@
 /conf.txt
 /conf.*.txt
 !/conf.example.txt
+/campus/site.json
 *.conf
 *.private
 *.key

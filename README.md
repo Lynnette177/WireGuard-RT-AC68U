@@ -2,6 +2,8 @@
 
 现已补齐一键部署：运行根目录 `deploy.ps1`，默认连接 `admin@192.168.1.1`，将 `conf.txt` 中的 IPv4 `AllowedIPs` 同步用于 WireGuard Peer、路由和局域网双向转发规则；忽略 DNS 字段，保留现有路由器 DNS。详见 [部署说明](DEPLOY.md)。部署前先将 `conf.txt` 替换为真实配置，并在路由器网页启用 LAN SSH。
 
+校园网 SRun 登录可另装 [校园网自动登录插件](campus/README.md)，在路由器管理员页面设置账号和检查间隔。插件默认关闭，配置与证书保存在本地。
+
 文档、配置模板和测试中的地址均为通用示例，不代表任何实际部署。使用其他 LAN 地址时通过 `-RouterAddress` 指定；安装和启动脚本从路由器 NVRAM 读取实际 LAN 地址。
 
 已在本机交叉编译，产物：`dist/wireguard-go`。这是 WireGuard 用户态守护进程；无须内核 WireGuard 模块，也不依赖 Entware/opkg。
